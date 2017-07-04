@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "MainWindow.h"
+#include <qfiledialog.h>
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
@@ -28,7 +29,7 @@ void MainWindow::AddToolBarButton(const char* iconPath, const char* name, const 
 
 void MainWindow::NewWindow()
 {
-
+	
 }
 
 void MainWindow::__ArrangeLayouts()
@@ -72,13 +73,20 @@ void MainWindow::__SetButtons()
 	AddToolBarButton("Resources\\cross.png", "measure", "");
 
 	connect(ui.table_marketinfo, SIGNAL(NewWindow(QString)), this, SLOT(NewSubWindow(QString)));
+	connect(ui.mainToolBar->actions()[0], SIGNAL(triggered()), this, SLOT(OpenFile()));
+}
+
+void MainWindow::OpenFile()
+{
+	QString& fname = QFileDialog::getOpenFileName();
 }
 
 void MainWindow::NewSubWindow(const QString& title)
 {
-	__new_subwindow = new SubWindow(ui.mdiArea);
+	__new_subwindow = new SubWindow(title, ui.mdiArea);
 	__new_subwindow->setWindowTitle(title);
 	__new_subwindow->setAttribute(Qt::WA_DeleteOnClose);
 	ui.mdiArea->addSubWindow(__new_subwindow);
 	__new_subwindow->show();
+	__new_subwindow->ShowView();
 }

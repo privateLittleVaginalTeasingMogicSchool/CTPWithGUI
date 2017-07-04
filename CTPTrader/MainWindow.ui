@@ -17,11 +17,12 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>CtpTrader 4</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(60, 63, 65);
-color: rgb(255, 255, 255);</string>
+color: rgb(255, 255, 255);
+selection-background-color: rgb(112, 112, 112);</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout_4">

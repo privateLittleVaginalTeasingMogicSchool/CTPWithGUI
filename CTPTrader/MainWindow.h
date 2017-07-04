@@ -14,7 +14,7 @@ public:
 	void Initialize();
 	void AddToolBarButton(const char* iconPath, const char* name, const char* statusDscrp);
 	void NewWindow();
-	
+
 private:
 	Ui::MainWindowClass ui;
 	SubWindow* __new_subwindow;
@@ -22,4 +22,5 @@ private:
 	void __SetButtons();
 private slots:
 	void NewSubWindow(const QString& title);
+	void OpenFile();
 };

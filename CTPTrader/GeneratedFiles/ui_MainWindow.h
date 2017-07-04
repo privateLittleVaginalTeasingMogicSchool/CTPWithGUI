@@ -72,7 +72,8 @@ public:
         font.setPointSize(11);
         MainWindowClass->setFont(font);
         MainWindowClass->setStyleSheet(QLatin1String("background-color: rgb(60, 63, 65);\n"
-"color: rgb(255, 255, 255);"));
+"color: rgb(255, 255, 255);\n"
+"selection-background-color: rgb(112, 112, 112);"));
         actionSettings = new QAction(MainWindowClass);
         actionSettings->setObjectName(QStringLiteral("actionSettings"));
         actionExit = new QAction(MainWindowClass);
@@ -233,7 +234,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindowClass)
     {
-        MainWindowClass->setWindowTitle(QApplication::translate("MainWindowClass", "MainWindow", Q_NULLPTR));
+        MainWindowClass->setWindowTitle(QApplication::translate("MainWindowClass", "CtpTrader 4", Q_NULLPTR));
         actionSettings->setText(QApplication::translate("MainWindowClass", "Settings", Q_NULLPTR));
         actionExit->setText(QApplication::translate("MainWindowClass", "Exit", Q_NULLPTR));
         actionLog_in->setText(QApplication::translate("MainWindowClass", "Log in", Q_NULLPTR));

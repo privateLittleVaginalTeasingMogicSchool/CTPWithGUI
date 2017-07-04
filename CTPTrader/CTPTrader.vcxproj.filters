@@ -60,6 +60,12 @@
     <ClCompile Include="SubWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SubWindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SubWindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -67,9 +73,6 @@
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_MainWindow.h">
       <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SubWindow.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +86,9 @@
       <Filter>Resource Files</Filter>
     </CustomBuild>
     <CustomBuild Include="MarketInfoTable.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SubWindow.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
